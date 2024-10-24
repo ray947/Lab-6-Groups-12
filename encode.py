@@ -7,6 +7,15 @@ def encode(password):
         encoded_password += str(new_digit)
     return encoded_password
 
+# carson salameh
+
+def decode(password):
+    output = ""
+    for digit in password:
+        new_digit = (int(digit) + 3) % 10
+        output += str(new_digit)
+    return output
+
 
 
 def main():
@@ -28,6 +37,13 @@ def main():
             else:
                 print("error")
         
+        # carson salameh
+        elif option == "2":
+            if len(encoded_password) == 8 and password.isdigit():
+                output = decode(encoded_password)
+                print("Your decoded password is:",output)
+            else:
+                print("error")
         
         
         elif option == "3":
